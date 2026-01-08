@@ -13,28 +13,33 @@ module.exports = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 5000,
-          },
-        },
-      },
-    ],
+            runs: 5000
+          }
+        }
+      }
+    ]
   },
   networks: {
     hardhat: {
       settings: {
         debug: {
-          revertStrings: 'debug',
-        },
-      },
+          revertStrings: 'debug'
+        }
+      }
     },
     tenderly: {
       chainId: 1,
       url: `https://rpc.tenderly.co/fork/${process.env.TENDERLY_FORK_ID}`,
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`, // or any other JSON-RPC provider
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     },
-  },
+    base: {
+      url: 'https://invictus.ambire.com/base',
+      chainId: 8453,
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+    }
+  }
 }

@@ -13,13 +13,15 @@ contract MerkleDistributor is IMerkleDistributor {
 
     address public immutable override token;
     bytes32 public immutable override merkleRoot;
+    address public immutable vault;
 
     // This is a packed array of booleans.
     mapping(uint256 => uint256) private claimedBitMap;
 
-    constructor(address token_, bytes32 merkleRoot_) {
+    constructor(address token_, bytes32 merkleRoot_, address vault_) {
         token = token_;
         merkleRoot = merkleRoot_;
+        vault = vault_;
     }
 
     function isClaimed(uint256 index) public view override returns (bool) {
@@ -49,7 +51,7 @@ contract MerkleDistributor is IMerkleDistributor {
 
         // Mark it claimed and send the token.
         _setClaimed(index);
-        IERC20(token).safeTransfer(account, amount);
+        IERC20(token).safeTransferFrom(vault, account, amount);
 
         emit Claimed(index, account, amount);
     }

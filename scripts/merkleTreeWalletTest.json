@@ -1,0 +1,44 @@
+{
+    "merkleRoot": "0x35ca3174489c0e4872ed9e8b955a79adf25b946c41b3753354c83379c7893009",
+    "tokenTotal": "0x29a2241af62c0000",
+    "claims": {
+        "0x0f382B645220F2DE51149351899488DbB2637eC9": {
+            "index": 0,
+            "amount": "0x0de0b6b3a7640000",
+            "proof": [
+                "0xf91553d346c555496f53dabad8bb58fc0e46f33d6122e1fb64333b20401efae1"
+            ],
+            "flags": {
+                "isSOCKS": false,
+                "isLP": false,
+                "isUser": false
+            }
+        },
+        "0x4B71dEFc95e00cb5ef9892EED91bF3209Eba8Ca1": {
+            "index": 1,
+            "amount": "0x0de0b6b3a7640000",
+            "proof": [
+                "0x23635fa2a28007629aed02d05842ba5f1b45af168588ed78f0d99f3a169659af",
+                "0xc243e1aaf101b2b91f1d3e37d15b3be2d0ee9dc23c82ae708bbad55761eb12a6"
+            ],
+            "flags": {
+                "isSOCKS": false,
+                "isLP": false,
+                "isUser": false
+            }
+        },
+        "0x880851a20750fAebd1fe460F8c10878fEf5C514A": {
+            "index": 2,
+            "amount": "0x0de0b6b3a7640000",
+            "proof": [
+                "0x550d7022fe29ffbac497363c88878564817a11eaa7ef22a858e8ad0dedf3a7c3",
+                "0xc243e1aaf101b2b91f1d3e37d15b3be2d0ee9dc23c82ae708bbad55761eb12a6"
+            ],
+            "flags": {
+                "isSOCKS": false,
+                "isLP": false,
+                "isUser": false
+            }
+        }
+    }
+}

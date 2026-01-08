@@ -5,8 +5,8 @@ const { ethers } = require('hardhat')
 async function main() {
   const MerkleDistributor = await ethers.getContractFactory('MerkleDistributor')
   const merkleDistributor = await MerkleDistributor.deploy( 
-    '0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0', // Token
-    '0xbe154afea9ba1e08729654a19c53952a892d6b37fe0b5d1bdf8ac4f51d03a426', // MerkleRoot
+    '0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0', // Token - stkWallet
+    '0x3e2b5f343a7e9e511c2cbb041d24b420b9aae944f6247f0842bbf66f5f65ec1c', // MerkleRoot - season 1
     '0xFDE6d7303868fD2046c15263C9268618092664d1' //vault (buybacks.ambire.eth)
   )
   await merkleDistributor.deployed()
